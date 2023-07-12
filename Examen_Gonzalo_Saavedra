@@ -1,0 +1,81 @@
+#Ejercicio prueba
+import numpy as np
+print("INMOBILARIA CASA FELIZ")
+clientes=[]
+ganancias_totales=0
+i=0
+#Menu
+def menu():
+  print("1.Comprar departamento")
+  print("2.Mostrar departamentos disponibles")
+  print("3.Ver listado de compradores")
+  print("4.Mostrar ganancias totales")
+  print("5.Salir")
+def menu2():
+  print("1.TipoA :3800UF")
+  print("2.TipoB :3000UF")
+  print("3.TipoC :2900UF")
+  print("4.TipoD :3500UF")
+#Comprar
+def compras():
+  print("Usted a seleccionado la opcion para comprar un departamnento ")
+  print("")
+  print("")
+  print("Los precios de los departamentos , son los siguientes: ")
+  menu2()
+  print("")
+  print ("Si esta deacuerdo con los valores y desea continuar con la comprar porfavor ")
+  print("")
+  nomb=input("Ingrese el nombre del cliente:  ")
+  print("")
+  rut=int(input("Ingrese el rut del cliente:  "))
+  print()
+  print("Los departamentos disponibles son :")
+  matriz=np.zeros((10, 4))#Como no recuerdo como marcar la matriz con las x dejare una matriz con 0 y los remplzarare por 1 cuando sean comprados
+  print(matriz)
+  print("")
+  print("Seleccione un departamento que este disponible")
+  print("")
+  cliente={rut,nomb}
+  clientes.append(cliente)
+  print("SE A COMPLETADO LA COMPRA Y REGISTRADO EL CLIENTE ")
+  i=1
+#Mostar dep
+def mostrar_dep():
+    print("")
+    matriz=np.zeros((10, 4))#Como no recuerdo como marcar la matriz con las x dejare una matriz con 0 y los remplzarare por 1 cuando sean comprados
+    print(matriz)
+#ver
+def vizaulizar():
+  print(clientes)
+#Ganancias
+def most_ganancias():
+  ganancias_totales+=ganancias_totales
+  print("")
+#salir
+def salir():
+    print("Usted a elegido abandonar el sistema")
+    print("Se despide Gonzalo Saavedra")
+    print("Fecha:12/07/2023")  
+#terminamos con las funciones 
+#Inicia lo importante
+print("Bienvenido al sistema para compra de departamentos ")
+print("")
+while i==0:
+  op=int(input("Ingrese la opcion que desea realizar: "))
+  print("")
+  if op==1:
+    compras()
+  #MOSTA4RR DEPARTAMETNO
+  if op==2:
+    mostrar_dep()
+  #ver listado de compras
+  if op==3:
+    vizaulizar()
+  #Mostara ganancias 
+  if op==4:
+    most_ganancias()
+  #salir
+  if op==5:
+    salir()
+    i=1
